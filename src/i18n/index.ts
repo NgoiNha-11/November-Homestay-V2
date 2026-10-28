@@ -1,3 +1,4 @@
+import { decorateIcons } from '../shared/icons';
 import { translateText, type Locale } from './translations';
 export function resolveLocale(query: string, stored: string | null): Locale {
   const requested = new URLSearchParams(query).get('lang');
@@ -15,12 +16,17 @@ export function getLocale(): Locale {
 export const t = (value: string): string => translateText(value, getLocale());
 /** Translate owned UI text only; guest reviews and proper names keep their original content. */
 export function localize(root: HTMLElement): void {
-  if (getLocale() !== 'en') return;
+  if (getLocale() !== 'en') {
+    decorateIcons(root);
+    return;
+  }
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let current: Node | null;
   while ((current = walker.nextNode())) {
     if (
-      current.parentElement?.closest('[data-no-translate], script, style, .brand, .language-switch')
+      current.parentElement?.closest(
+        '[data-no-translate], script, style, svg, .brand, .language-switch',
+      )
     )
       continue;
     const original = current.textContent ?? '';
@@ -46,6 +52,7 @@ export function localize(root: HTMLElement): void {
       if (value) element.setAttribute(attr, t(value));
     }
   }
+  decorateIcons(root);
 }
 export function mountLanguageSwitch(): void {
   document.documentElement.lang = getLocale();

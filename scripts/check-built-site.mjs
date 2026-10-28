@@ -168,7 +168,12 @@ for (const prefix of ['/', '/november-v2/']) {
     assert.equal(node(w, '#empty').hidden, false);
     node(w, '#empty-reset').click();
     assert.equal(w.document.querySelectorAll('#room-grid .room-card').length, 20);
+    assert.equal(node(w, '[data-favorite="dbp101"] svg').getAttribute('fill'), 'none');
+    assert.ok(w.document.querySelectorAll('.icon-arrow-up-right').length > 0);
+    assert.equal(node(w, '#favorite-filter').textContent.includes('♡'), false);
+    assert.equal(node(w, '#room-grid').textContent.includes('↗'), false);
     node(w, '[data-favorite="dbp101"]').click();
+    assert.equal(node(w, '[data-favorite="dbp101"] svg').getAttribute('fill'), 'currentColor');
     assert.equal(node(w, '#favorite-count').textContent, '1');
     node(w, '#favorite-filter').click();
     assert.equal(w.document.querySelectorAll('#room-grid .room-card').length, 1);

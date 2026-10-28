@@ -353,6 +353,9 @@ export function translateText(value: string, locale: Locale): string {
   if (locale === 'vi') return value;
   const text = value.replace(/\s+/g, ' ').trim();
   if (english[text]) return english[text];
+  // Icons may already be SVGs when a section is localized again.
+  if (english[text + ' ↗']) return english[text + ' ↗'].replace(/\s*↗\uFE0F?/gu, '');
+  if (english['♡ ' + text]) return english['♡ ' + text].replace(/^♡\s*/, '');
   return text
     .replace(/^(?:Số phòng|Phòng): (\d+)$/, 'Rooms: $1')
     .replace(/^(?:Số tầng|Tầng): (\d+)$/, 'Floors: $1')

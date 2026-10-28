@@ -392,12 +392,14 @@ nav a:hover,
   top: 13px;
   right: 13px;
   z-index: 2;
-  width: 35px;
-  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: 0;
-  border-radius: 50%;
-  background: #faf8f3ed;
-  font-size: 23px;
+  background: transparent;
   color: var(--ink);
   line-height: 1;
 }
@@ -1280,9 +1282,8 @@ footer {
   .room-card .favorite {
     top: 8px;
     right: 8px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
+    width: 44px;
+    height: 44px;
   }
   .room-card .card-top {
     margin-top: 12px;
@@ -2142,4 +2143,34 @@ h3 {
   margin-top: 6px;
   font-size: 14px;
   font-weight: 600;
+}
+
+.ui-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: -0.15em;
+  pointer-events: none;
+}
+.icon-arrow-up-right {
+  width: 1em;
+  height: 1em;
+  margin-inline-start: 0.2em;
+}
+.button .icon-arrow-up-right,
+.card-top > a .icon-arrow-up-right {
+  margin-inline-start: 0;
+}
+.favorite .icon-heart {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 6px #fff) drop-shadow(0 1px 8px #ffffffee);
+}
+#favorite-filter .icon-heart {
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 4px;
+  vertical-align: -0.2em;
+}
+#favorite-filter[aria-pressed='true'] .icon-heart {
+  fill: currentColor;
 }

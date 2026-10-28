@@ -1,3 +1,4 @@
+import { heartIcon } from '../../shared/icons';
 import { branchView } from './branch-view';
 import { localize, t } from '../../i18n';
 import {
@@ -26,7 +27,7 @@ export function mountCatalog(catalog: Catalog, initialBranch: string): void {
   function updateFavorites(): void {
     document.querySelectorAll<HTMLButtonElement>('[data-favorite]').forEach((button) => {
       const saved = favorites.has(button.dataset.favorite!);
-      button.textContent = saved ? '♥' : '♡';
+      button.innerHTML = heartIcon(saved);
       button.setAttribute('aria-pressed', String(saved));
       button.setAttribute(
         'aria-label',
