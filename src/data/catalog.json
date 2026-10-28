@@ -1,0 +1,1346 @@
+{
+  "branches": [
+    {
+      "id": "dbp",
+      "name": "Điện Biên Phủ",
+      "address": "119/7A, Điện Biên Phủ, Tân Định, Hồ Chí Minh, Việt Nam",
+      "cover": "img/dbp/dbp101/dbp101(1).jpg",
+      "roomCount": 5,
+      "floors": 4,
+      "overview": "Nằm trên con đường trung tâm thành phố Hồ Chí Minh, phong cách hiện đại, ấm cúng, không gian xanh, yên tĩnh, không khí trong lành, mát mẻ. Di chuyển đến các khu vực lân cận ngay trung tâm rất thuận tiện như Nhà thờ Tân Định, Nhà thờ Đức Bà, phố Hai Bà Trưng,..",
+      "facilities": [
+        "Check-in, check-out tự động",
+        "Dịch vụ dọn phòng",
+        "Thang bộ",
+        "Bình chữa cháy",
+        "Bãi giữ xe máy",
+        "Wifi miễn phí",
+        "Máy giặt"
+      ]
+    },
+    {
+      "id": "pn",
+      "name": "Phú Nhuận",
+      "address": "201/1 Nguyễn Đình Chính, Phú Nhuận, Hồ Chí Minh, Việt Nam",
+      "cover": "img/pn/pn201/pn201(1).jpg",
+      "roomCount": 2,
+      "floors": 2,
+      "overview": "Tọa lạc tại vị trí trung tâm Phú Nhuận, chi nhánh mang đến không gian ấm cúng, tiện nghi. Đây là lựa chọn lý tưởng cho những ai muốn khám phá khu vực sầm uất và di chuyển thuận tiện đến các điểm du lịch trong thành phố.",
+      "facilities": [
+        "Check-in, check-out tự động",
+        "Dịch vụ dọn phòng",
+        "Bình chữa cháy",
+        "Bãi giữ xe máy",
+        "Wifi miễn phí"
+      ]
+    },
+    {
+      "id": "hs",
+      "name": "Hoàng Sa",
+      "address": "155 Hoàng Sa, Tân Định, Hồ Chí Minh, Việt Nam",
+      "cover": "img/hs/hs501/hs501(1).jpg",
+      "roomCount": 5,
+      "floors": 5,
+      "overview": "Nằm trên con đường trung tâm thành phố Hồ Chí Minh, phong cách hiện đại, ấm cúng, không gian xanh, yên tĩnh, không khí trong lành, mát mẻ. Di chuyển đến các khu vực lân cận ngay trung tâm rất thuận tiện như Nhà thờ Tân Định, Nhà thờ Đức Bà, phố Hai Bà Trưng,..",
+      "facilities": [
+        "Check-in, check-out tự động",
+        "Dịch vụ dọn phòng",
+        "Thang bộ",
+        "Bình chữa cháy",
+        "Bãi giữ xe máy",
+        "Wifi miễn phí",
+        "Máy giặt"
+      ]
+    },
+    {
+      "id": "hbt",
+      "name": "Hai Bà Trưng",
+      "address": "451/11 Hai Bà Trưng, Xuân Hòa, Hồ Chí Minh, Việt Nam",
+      "cover": "img/hbt/hbt102/hbt102(2).jpg",
+      "roomCount": 5,
+      "floors": 3,
+      "overview": "Chi nhánh nằm tại khu vực trung tâm thành phố, thuận tiện di chuyển, không gian yên tĩnh nhưng gần nhiều điểm ăn uống và vui chơi.",
+      "facilities": [
+        "Check-in, check-out tự động",
+        "Thang bộ",
+        "Dịch vụ dọn phòng",
+        "Bình chữa cháy",
+        "Khu vực để xe máy",
+        "Wifi miễn phí"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "dbp101",
+      "branch": "dbp",
+      "name": "Phòng 101",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/dbp/dbp101/dbp101(1).jpg",
+        "img/dbp/dbp101/dbp101(2).jpg",
+        "img/dbp/dbp101/dbp101(3).jpg",
+        "img/dbp/dbp101/dbp101(4).jpg",
+        "img/dbp/dbp101/dbp101(5).jpg",
+        "img/dbp/dbp101/dbp101(6).jpg",
+        "img/dbp/dbp101/dbp101(7).jpg",
+        "img/dbp/dbp101/dbp101(8).jpg",
+        "img/dbp/dbp101/dbp101(9).jpg",
+        "img/dbp/dbp101/dbp101(10).jpg",
+        "img/dbp/dbp101/dbp101(11).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 330000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 330000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 400000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 500000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "dbp201",
+      "branch": "dbp",
+      "name": "Phòng 201",
+      "description": "1 giường đôi, bếp, ban công, cửa sổ",
+      "images": [
+        "img/dbp/dbp201/dbp201(1).jpg",
+        "img/dbp/dbp201/dbp201(2).jpg",
+        "img/dbp/dbp201/dbp201(3).jpg",
+        "img/dbp/dbp201/dbp201(4).jpg",
+        "img/dbp/dbp201/dbp201(5).jpg",
+        "img/dbp/dbp201/dbp201(6).jpg",
+        "img/dbp/dbp201/dbp201(7).jpg",
+        "img/dbp/dbp201/dbp201(8).jpg",
+        "img/dbp/dbp201/dbp201(9).jpg",
+        "img/dbp/dbp201/dbp201(10).png",
+        "img/dbp/dbp201/dbp201(11).png"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 370000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 370000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 550000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 600000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, ban công, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "dbp202",
+      "branch": "dbp",
+      "name": "Phòng 202",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/dbp/dbp202/dbp202(1).jpg",
+        "img/dbp/dbp202/dbp202(2).jpg",
+        "img/dbp/dbp202/dbp202(3).jpg",
+        "img/dbp/dbp202/dbp202(4).jpg",
+        "img/dbp/dbp202/dbp202(5).jpg",
+        "img/dbp/dbp202/dbp202(6).jpg",
+        "img/dbp/dbp202/dbp202(7).jpg",
+        "img/dbp/dbp202/dbp202(8).jpg",
+        "img/dbp/dbp202/dbp202(9).jpg",
+        "img/dbp/dbp202/dbp202(10).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 350000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 350000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 500000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": ["Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "dbp301",
+      "branch": "dbp",
+      "name": "Phòng 301",
+      "description": "1 giường đôi, bếp, ban công, cửa sổ",
+      "images": [
+        "img/dbp/dbp301/dbp301(1).jpg",
+        "img/dbp/dbp301/dbp301(2).jpg",
+        "img/dbp/dbp301/dbp301(3).jpg",
+        "img/dbp/dbp301/dbp301(4).jpg",
+        "img/dbp/dbp301/dbp301(5).jpg",
+        "img/dbp/dbp301/dbp301(6).jpg",
+        "img/dbp/dbp301/dbp301(7).jpg",
+        "img/dbp/dbp301/dbp301(8).jpg",
+        "img/dbp/dbp301/dbp301(9).jpg",
+        "img/dbp/dbp301/dbp301(10).png",
+        "img/dbp/dbp301/dbp301(11).png"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 370000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 370000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 550000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 600000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, ban công, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "dbp302",
+      "branch": "dbp",
+      "name": "Phòng 302",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/dbp/dbp302/dbp302(1).jpg",
+        "img/dbp/dbp302/dbp302(2).jpg",
+        "img/dbp/dbp302/dbp302(3).jpg",
+        "img/dbp/dbp302/dbp302(4).jpg",
+        "img/dbp/dbp302/dbp302(5).jpg",
+        "img/dbp/dbp302/dbp302(6).jpg",
+        "img/dbp/dbp302/dbp302(7).jpg",
+        "img/dbp/dbp302/dbp302(8).jpg",
+        "img/dbp/dbp302/dbp302(9).jpg",
+        "img/dbp/dbp302/dbp302(10).jpg",
+        "img/dbp/dbp302/dbp302(11).jpg",
+        "img/dbp/dbp302/dbp302(12).jpg",
+        "img/dbp/dbp302/dbp302(13).jpg",
+        "img/dbp/dbp302/dbp302(14).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 350000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 350000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 500000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": ["Diện tích: 15m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "dbp401",
+      "branch": "dbp",
+      "name": "Phòng 401",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/dbp/dbp401/dbp401(1).jpg",
+        "img/dbp/dbp401/dbp401(2).jpg",
+        "img/dbp/dbp401/dbp401(3).jpg",
+        "img/dbp/dbp401/dbp401(4).jpg",
+        "img/dbp/dbp401/dbp401(5).jpg",
+        "img/dbp/dbp401/dbp401(6).jpg",
+        "img/dbp/dbp401/dbp401(7).jpg",
+        "img/dbp/dbp401/dbp401(8).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 330000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 330000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 400000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 500000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "pn101",
+      "branch": "pn",
+      "name": "Phòng 101",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/pn/pn101/pn101(1).jpg",
+        "img/pn/pn101/pn101(2).jpg",
+        "img/pn/pn101/pn101(3).jpg",
+        "img/pn/pn101/pn101(4).jpg",
+        "img/pn/pn101/pn101(5).jpg",
+        "img/pn/pn101/pn101(6).jpg",
+        "img/pn/pn101/pn101(7).jpg",
+        "img/pn/pn101/pn101(8).jpg",
+        "img/pn/pn101/pn101(9).jpg",
+        "img/pn/pn101/pn101(10).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 330000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 330000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 390000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 450000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": [
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Bếp, cửa sổ",
+        "Tầm nhìn ra quang cảnh",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "pn201",
+      "branch": "pn",
+      "name": "Phòng 201",
+      "description": "1 giường đôi, bếp, ban công, cửa sổ",
+      "images": [
+        "img/pn/pn201/pn201(1).jpg",
+        "img/pn/pn201/pn201(2).jpg",
+        "img/pn/pn201/pn201(3).jpg",
+        "img/pn/pn201/pn201(4).jpg",
+        "img/pn/pn201/pn201(5).jpg",
+        "img/pn/pn201/pn201(6).jpg",
+        "img/pn/pn201/pn201(7).jpg",
+        "img/pn/pn201/pn201(8).jpg",
+        "img/pn/pn201/pn201(9).jpg",
+        "img/pn/pn201/pn201(10).jpg",
+        "img/pn/pn201/pn201(11).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 330000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 330000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 390000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 450000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": [
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Bếp, ban công, cửa sổ",
+        "Tầm nhìn ra quang cảnh",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "hs102",
+      "branch": "hs",
+      "name": "Phòng 102",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/hs/hs102/hs102(1).jpg",
+        "img/hs/hs102/hs102(2).jpg",
+        "img/hs/hs102/hs102(3).jpg",
+        "img/hs/hs102/hs102(4).jpg",
+        "img/hs/hs102/hs102(5).jpg",
+        "img/hs/hs102/hs102(6).jpg",
+        "img/hs/hs102/hs102(7).jpg",
+        "img/hs/hs102/hs102(8).jpg",
+        "img/hs/hs102/hs102(9).jpg",
+        "img/hs/hs102/hs102(10).jpg",
+        "img/hs/hs102/hs102(11).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 350000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 350000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 450000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "hs201",
+      "branch": "hs",
+      "name": "Phòng 201",
+      "description": "1 giường đôi, ban công, cửa sổ",
+      "images": [
+        "img/hs/hs201/hs201(1).jpg",
+        "img/hs/hs201/hs201(2).jpg",
+        "img/hs/hs201/hs201(3).jpg",
+        "img/hs/hs201/hs201(4).jpg",
+        "img/hs/hs201/hs201(5).jpg",
+        "img/hs/hs201/hs201(6).jpg",
+        "img/hs/hs201/hs201(7).jpg",
+        "img/hs/hs201/hs201(8).jpg",
+        "img/hs/hs201/hs201(9).jpg",
+        "img/hs/hs201/hs201(10).jpg",
+        "img/hs/hs201/hs201(11).jpg",
+        "img/hs/hs201/hs201(12).jpg",
+        "img/hs/hs201/hs201(13).jpg",
+        "img/hs/hs201/hs201(14).jpg",
+        "img/hs/hs201/hs201(15).jpg",
+        "img/hs/hs201/hs201(16).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 370000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 370000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 470000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 560000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Lò nướng mini",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": [
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Ban công, cửa sổ",
+        "Quang cảnh sông và đường phố",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "hs202",
+      "branch": "hs",
+      "name": "Phòng 202",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/hs/hs202/hs202(1).jpg",
+        "img/hs/hs202/hs202(2).jpg",
+        "img/hs/hs202/hs202(3).jpg",
+        "img/hs/hs202/hs202(4).jpg",
+        "img/hs/hs202/hs202(5).jpg",
+        "img/hs/hs202/hs202(6).jpg",
+        "img/hs/hs202/hs202(7).jpg",
+        "img/hs/hs202/hs202(8).jpg",
+        "img/hs/hs202/hs202(9).jpg",
+        "img/hs/hs202/hs202(10).jpg",
+        "img/hs/hs202/hs202(11).jpg",
+        "img/hs/hs202/hs202(12).jpg",
+        "img/hs/hs202/hs202(13).jpg",
+        "img/hs/hs202/hs202(14).jpg",
+        "img/hs/hs202/hs202(15).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 350000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 350000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 450000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "hs301",
+      "branch": "hs",
+      "name": "Phòng 301",
+      "description": "1 giường đôi, ban công, cửa sổ",
+      "images": [
+        "img/hs/hs301/hs301(1).jpg",
+        "img/hs/hs301/hs301(2).jpg",
+        "img/hs/hs301/hs301(3).jpg",
+        "img/hs/hs301/hs301(4).jpg",
+        "img/hs/hs301/hs301(5).jpg",
+        "img/hs/hs301/hs301(6).jpg",
+        "img/hs/hs301/hs301(7).jpg",
+        "img/hs/hs301/hs301(8).jpg",
+        "img/hs/hs301/hs301(9).jpg",
+        "img/hs/hs301/hs301(10).jpg",
+        "img/hs/hs301/hs301(11).jpg",
+        "img/hs/hs301/hs301(12).jpg",
+        "img/hs/hs301/hs301(13).jpg",
+        "img/hs/hs301/hs301(14).jpg",
+        "img/hs/hs301/hs301(15).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 370000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 370000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 470000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 560000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Lò vi sóng"
+      ],
+      "overview": [
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Ban công, cửa sổ",
+        "Quang cảnh sông, thành phố, Landmark 81",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "hs302",
+      "branch": "hs",
+      "name": "Phòng 302",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/hs/hs302/hs302(1).jpg",
+        "img/hs/hs302/hs302(2).jpg",
+        "img/hs/hs302/hs302(3).jpg",
+        "img/hs/hs302/hs302(5).jpg",
+        "img/hs/hs302/hs302(6).jpg",
+        "img/hs/hs302/hs302(7).jpg",
+        "img/hs/hs302/hs302(8).jpg",
+        "img/hs/hs302/hs302(9).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 350000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 350000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 450000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "hs401",
+      "branch": "hs",
+      "name": "Phòng 401",
+      "description": "1 giường đôi, ban công, cửa sổ",
+      "images": [
+        "img/hs/hs401/hs401(1).jpg",
+        "img/hs/hs401/hs401(2).jpg",
+        "img/hs/hs401/hs401(3).jpg",
+        "img/hs/hs401/hs401(4).jpg",
+        "img/hs/hs401/hs401(5).jpg",
+        "img/hs/hs401/hs401(6).jpg",
+        "img/hs/hs401/hs401(7).jpg",
+        "img/hs/hs401/hs401(8).jpg",
+        "img/hs/hs401/hs401(9).jpg",
+        "img/hs/hs401/hs401(10).jpg",
+        "img/hs/hs401/hs401(11).jpg",
+        "img/hs/hs401/hs401(12).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 370000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 370000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 470000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 560000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": [
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Ban công, cửa sổ",
+        "Quang cảnh sông, thành phố, Landmark 81",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "hs501",
+      "branch": "hs",
+      "name": "Phòng 501",
+      "description": "1 giường đôi, bếp, ban công, cửa sổ",
+      "images": [
+        "img/hs/hs501/hs501(1).jpg",
+        "img/hs/hs501/hs501(2).jpg",
+        "img/hs/hs501/hs501(3).jpg",
+        "img/hs/hs501/hs501(4).jpg",
+        "img/hs/hs501/hs501(5).jpg",
+        "img/hs/hs501/hs501(6).jpg",
+        "img/hs/hs501/hs501(7).jpg",
+        "img/hs/hs501/hs501(8).jpg",
+        "img/hs/hs501/hs501(9).jpg",
+        "img/hs/hs501/hs501(10).jpg",
+        "img/hs/hs501/hs501(11).jpg",
+        "img/hs/hs501/hs501(12).jpg",
+        "img/hs/hs501/hs501(13).jpg"
+      ],
+      "prices": [
+        {
+          "label": "10h-14h",
+          "value": 370000,
+          "slot": "morning"
+        },
+        {
+          "label": "16h-20h",
+          "value": 370000,
+          "slot": "afternoon"
+        },
+        {
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 490000,
+          "slot": "overnight"
+        },
+        {
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 610000,
+          "slot": "daily"
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Bếp và dụng cụ nấu ăn cơ bản",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh"
+      ],
+      "overview": [
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Bếp, ban công, cửa sổ",
+        "Quang cảnh sông, thành phố, Landmark 81",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "hbt101",
+      "branch": "hbt",
+      "name": "Phòng 101",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/hbt/hbt101/hbt101(1).jpg",
+        "img/hbt/hbt101/hbt101(2).jpg",
+        "img/hbt/hbt101/hbt101(3).jpg",
+        "img/hbt/hbt101/hbt101(4).jpg",
+        "img/hbt/hbt101/hbt101(5).jpg",
+        "img/hbt/hbt101/hbt101(6).jpg",
+        "img/hbt/hbt101/hbt101(7).jpg",
+        "img/hbt/hbt101/hbt101(8).jpg",
+        "img/hbt/hbt101/hbt101(9).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 350000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 350000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 450000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "hbt102",
+      "branch": "hbt",
+      "name": "Phòng 102",
+      "description": "1 giường đôi, ban công, bếp chung",
+      "images": [
+        "img/hbt/hbt102/hbt102(1).jpg",
+        "img/hbt/hbt102/hbt102(2).jpg",
+        "img/hbt/hbt102/hbt102(3).jpg",
+        "img/hbt/hbt102/hbt102(4).jpg",
+        "img/hbt/hbt102/hbt102(5).jpg",
+        "img/hbt/hbt102/hbt102(6).jpg",
+        "img/hbt/hbt102/hbt102(7).jpg",
+        "img/hbt/hbt102/hbt102(8).jpg",
+        "img/hbt/hbt102/hbt102(9).jpg",
+        "img/hbt/hbt102/hbt102(10).jpg",
+        "img/hbt/hbt102/hbt102(11).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 370000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 370000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 470000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 560000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": [
+        "Diện tích: 17m²",
+        "1 giường đôi",
+        "Ban công, bếp chung",
+        "Tầm nhìn ra quang cảnh",
+        "Tối đa 2 khách"
+      ]
+    },
+    {
+      "id": "hbt201",
+      "branch": "hbt",
+      "name": "Phòng 201",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/hbt/hbt201/hbt201(1).jpg",
+        "img/hbt/hbt201/hbt201(2).jpg",
+        "img/hbt/hbt201/hbt201(3).jpg",
+        "img/hbt/hbt201/hbt201(4).jpg",
+        "img/hbt/hbt201/hbt201(5).jpg",
+        "img/hbt/hbt201/hbt201(6).jpg",
+        "img/hbt/hbt201/hbt201(7).jpg",
+        "img/hbt/hbt201/hbt201(8).jpg",
+        "img/hbt/hbt201/hbt201(9).jpg",
+        "img/hbt/hbt201/hbt201(10).jpg",
+        "img/hbt/hbt201/hbt201(11).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 350000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 350000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 450000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "hbt301",
+      "branch": "hbt",
+      "name": "Phòng 301",
+      "description": "1 giường đôi, bếp, cửa sổ",
+      "images": [
+        "img/hbt/hbt301/hbt301(1).jpg",
+        "img/hbt/hbt301/hbt301(2).jpg",
+        "img/hbt/hbt301/hbt301(3).jpg",
+        "img/hbt/hbt301/hbt301(4).jpg",
+        "img/hbt/hbt301/hbt301(5).jpg",
+        "img/hbt/hbt301/hbt301(6).jpg",
+        "img/hbt/hbt301/hbt301(7).jpg",
+        "img/hbt/hbt301/hbt301(8).jpg",
+        "img/hbt/hbt301/hbt301(9).jpg",
+        "img/hbt/hbt301/hbt301(10).jpg",
+        "img/hbt/hbt301/hbt301(11).jpg",
+        "img/hbt/hbt301/hbt301(12).jpg",
+        "img/hbt/hbt301/hbt301(13).jpg",
+        "img/hbt/hbt301/hbt301(14).jpg",
+        "img/hbt/hbt301/hbt301(15).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 350000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 350000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 450000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 580000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+    },
+    {
+      "id": "hbtg01",
+      "branch": "hbt",
+      "name": "Phòng G01",
+      "description": "1 giường đôi, máy chiếu, bếp chung",
+      "images": [
+        "img/hbt/hbtG01/hbtG01(1).jpg",
+        "img/hbt/hbtG01/hbtG01(2).jpg",
+        "img/hbt/hbtG01/hbtG01(3).jpg",
+        "img/hbt/hbtG01/hbtG01(4).jpg",
+        "img/hbt/hbtG01/hbtG01(5).jpg",
+        "img/hbt/hbtG01/hbtG01(6).jpg",
+        "img/hbt/hbtG01/hbtG01(7).jpg",
+        "img/hbt/hbtG01/hbtG01(8).jpg"
+      ],
+      "prices": [
+        {
+          "slot": "morning",
+          "label": "10h-14h",
+          "value": 350000
+        },
+        {
+          "slot": "afternoon",
+          "label": "16h-20h",
+          "value": 350000
+        },
+        {
+          "slot": "overnight",
+          "label": "21h-9h (ngày hôm sau)",
+          "value": 430000
+        },
+        {
+          "slot": "daily",
+          "label": "14h-12h (ngày hôm sau)",
+          "value": 500000
+        }
+      ],
+      "notes": [
+        "Extra: 50.000VNĐ / 1 tiếng",
+        "Phụ thu lễ, Tết: 20%",
+        "Khung giờ có thể thay đổi tuỳ theo tình trạng phòng trống"
+      ],
+      "amenities": [
+        "Không hút thuốc",
+        "Máy chiếu có Netflix",
+        "Máy lạnh",
+        "Tủ lạnh",
+        "Ấm đun nước",
+        "Giá treo",
+        "Máy sấy tóc",
+        "Khăn tắm",
+        "Bàn chải, kem đánh răng, lược",
+        "WC riêng",
+        "Không gian yên tĩnh",
+        "Bếp và dụng cụ nấu ăn cơ bản"
+      ],
+      "overview": ["Diện tích: 17m²", "1 giường đôi", "Máy chiếu, bếp chung", "Tối đa 2 khách"]
+    }
+  ]
+}

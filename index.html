@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#363e32" />
+    <meta
+      name="description"
+      content="Khám phá phòng tại November Homestay: Điện Biên Phủ, Phú Nhuận, Hoàng Sa và Hai Bà Trưng. Xem ảnh thực tế, tiện nghi, giá theo khung giờ và liên hệ đặt phòng."
+    />
+    <title>November Homestay — Một chốn riêng giữa Sài Gòn</title>
+    <link rel="icon" href="img/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Đến nội dung chính</a>
+    <header class="header">
+      <a href="index.html" class="brand header-brand" aria-label="November Homestay — Trang chủ"
+        ><img
+          src="img/logotransparent.png"
+          alt="November Homestay"
+          width="2160"
+          height="1208"
+          fetchpriority="high" /></a
+      ><button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="navigation"
+        aria-label="Mở menu"
+      >
+        ☰
+      </button>
+      <nav id="navigation" aria-label="Điều hướng chính">
+        <a href="index.html#rooms">Khám phá phòng</a><a href="index.html#branches">Chi nhánh</a
+        ><a href="index.html#booking">Cách đặt phòng</a><a href="index.html?page=rules">Nội quy</a
+        ><a class="nav-contact" href="#contact">Liên hệ với Nov ↗</a>
+      </nav>
+      <label class="language-switch"
+        ><span class="sr-only">Tiếng Việt / English</span
+        ><select id="language" aria-label="Tiếng Việt / English">
+          <option value="vi">VI</option>
+          <option value="en">EN</option>
+        </select></label
+      >
+    </header>
+    <main id="main">
+      <div id="home">
+        <section class="hero">
+          <div
+            class="hero-slides"
+            aria-label="Hình ảnh November Homestay"
+            aria-roledescription="trình chiếu"
+          >
+            <div class="hero-track">
+              <div class="hero-slide" role="group" aria-label="Ảnh 1 trên 5" aria-hidden="false">
+                <img
+                  class="hero-img"
+                  src="img/pn/pn201/pn201(1).jpg"
+                  alt="Không gian November Homestay — Ảnh 1"
+                  fetchpriority="high"
+                />
+              </div>
+              <div class="hero-slide" role="group" aria-label="Ảnh 2 trên 5" aria-hidden="true">
+                <img
+                  class="hero-img"
+                  src="img/anh1.jpg"
+                  alt="Không gian November Homestay — Ảnh 2"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero-slide" role="group" aria-label="Ảnh 3 trên 5" aria-hidden="true">
+                <img
+                  class="hero-img"
+                  src="img/anh2.jpg"
+                  alt="Không gian November Homestay — Ảnh 3"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero-slide" role="group" aria-label="Ảnh 4 trên 5" aria-hidden="true">
+                <img
+                  class="hero-img"
+                  src="img/anh3.jpg"
+                  alt="Không gian November Homestay — Ảnh 4"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero-slide" role="group" aria-label="Ảnh 5 trên 5" aria-hidden="true">
+                <img
+                  class="hero-img"
+                  src="img/anh4.jpg"
+                  alt="Không gian November Homestay — Ảnh 5"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">MAKE ROOM FOR A LITTLE SLOW LIVING</p>
+            <h1>Một chốn riêng,<br />giữa lòng <em>Sài Gòn.</em></h1>
+            <p>
+              Gác lại những vội vàng. Tìm một căn phòng ấm cúng,<br class="desktop" />
+              và tận hưởng khoảng thời gian của riêng bạn.
+            </p>
+            <a class="button cream" href="#rooms">Tìm không gian của bạn <span>↗</span></a>
+          </div>
+          <div class="hero-carousel-controls">
+            <button id="hero-prev" type="button" aria-label="Ảnh banner trước">←</button>
+            <div class="hero-dots">
+              <button
+                type="button"
+                data-slide="0"
+                aria-label="Xem ảnh banner 1"
+                aria-pressed="true"
+              ></button
+              ><button
+                type="button"
+                data-slide="1"
+                aria-label="Xem ảnh banner 2"
+                aria-pressed="false"
+              ></button
+              ><button
+                type="button"
+                data-slide="2"
+                aria-label="Xem ảnh banner 3"
+                aria-pressed="false"
+              ></button
+              ><button
+                type="button"
+                data-slide="3"
+                aria-label="Xem ảnh banner 4"
+                aria-pressed="false"
+              ></button
+              ><button
+                type="button"
+                data-slide="4"
+                aria-label="Xem ảnh banner 5"
+                aria-pressed="false"
+              ></button>
+            </div>
+            <button id="hero-next" type="button" aria-label="Ảnh banner tiếp">→</button>
+          </div>
+          <div class="hero-caption">NOVEMBER HOMESTAY</div>
+        </section>
+        <div class="intro-strip">
+          <span>01 — KHÔNG GIAN CỦA BẠN</span>
+          <p>
+            Riêng tư <span class="intro-dot">•</span> Yên bình
+            <span class="intro-dot">•</span> Thoải mái
+          </p>
+          <a href="#rooms">Khám phá 20 phòng ↓</a>
+        </div>
+        <section class="section rooms-section" id="rooms">
+          <div class="section-top">
+            <div>
+              <p class="eyebrow">FIND YOUR LITTLE ESCAPE</p>
+              <h2>Hôm nay, bạn muốn ở đâu?</h2>
+            </div>
+          </div>
+          <form id="filters" class="filters" role="search" aria-label="Tìm phòng phù hợp">
+            <label class="search-field"
+              >Tìm kiếm<input
+                id="search"
+                type="search"
+                placeholder="Tên phòng, máy chiếu, ban công…"
+                autocomplete="off" /></label
+            ><label
+              >Chi nhánh<select id="branch">
+                <option value="">Tất cả chi nhánh</option>
+              </select></label
+            ><label
+              >Ngân sách<select id="budget">
+                <option value="">Tất cả mức giá</option>
+                <option value="350000">Đến 350.000đ</option>
+                <option value="450000">Đến 450.000đ</option>
+                <option value="600000">Đến 600.000đ</option>
+              </select></label
+            ><button class="button" type="submit">Tìm phòng ↗</button>
+          </form>
+          <div class="filter-bottom">
+            <div class="amenity-filters" aria-label="Lọc tiện nghi">
+              <button type="button" data-amenity="Máy chiếu" aria-pressed="false">Máy chiếu</button
+              ><button type="button" data-amenity="ban công" aria-pressed="false">Ban công</button
+              ><button type="button" data-amenity="bếp" aria-pressed="false">Có bếp</button
+              ><button type="button" id="favorite-filter" aria-pressed="false">
+                ♡ Đã lưu <span id="favorite-count">0</span>
+              </button>
+            </div>
+            <label class="sort-label"
+              >Sắp xếp
+              <select id="sort">
+                <option value="default">Mặc định</option>
+                <option value="asc">Giá thấp đến cao</option>
+                <option value="desc">Giá cao đến thấp</option>
+              </select></label
+            >
+          </div>
+          <div class="result-line">
+            <p id="result-count" role="status" aria-live="polite"></p>
+            <button id="clear" type="button" class="text-button">Xóa bộ lọc ↺</button>
+          </div>
+          <p class="availability-note">
+            Giá từ là mức thấp nhất trong bảng giá của mỗi phòng, chưa gồm phụ thu nếu có. Xem chi
+            tiết để chọn khung giờ và liên hệ Nov xác nhận phòng.
+          </p>
+          <div id="room-grid" class="room-grid"></div>
+          <div id="empty" class="empty" hidden>
+            <h3>Chưa tìm thấy căn phòng phù hợp</h3>
+            <p>Thử mở rộng ngân sách hoặc bỏ bớt bộ lọc nhé.</p>
+            <button class="button" id="empty-reset">Xem tất cả phòng</button>
+          </div>
+        </section>
+
+        <section class="section" id="branches">
+          <div class="section-top">
+            <div>
+              <p class="eyebrow">FOUR ADDRESSES. ONE NOVEMBER.</p>
+              <h2>Hẹn bạn tại November.</h2>
+            </div>
+            <p>Bốn chi nhánh. Nằm giữa lòng Sài Gòn.</p>
+          </div>
+          <div class="branch-grid" id="branch-grid"></div>
+        </section>
+        <section class="section faq" id="faq">
+          <div>
+            <p class="eyebrow">A FEW THINGS TO KNOW</p>
+            <h2>Trước khi bạn ghé</h2>
+          </div>
+          <div class="faq-items">
+            <details>
+              <summary>Làm sao biết phòng còn trống?</summary>
+              <p>
+                Website giúp bạn xem ảnh, giá và chọn phòng. Bạn vui lòng nhắn Nov ngày, giờ dự kiến
+                và tên phòng để kiểm tra tình trạng trống thực tế.
+              </p>
+            </details>
+            <details>
+              <summary>Giá phòng được tính như thế nào?</summary>
+              <p>
+                Danh sách hiển thị giá từ của mỗi phòng. Trang chi tiết có đầy đủ bảng giá và phụ
+                thu theo thông tin hiện có. Khung giờ có thể thay đổi tùy tình trạng phòng; Nov sẽ
+                xác nhận trước khi bạn đặt.
+              </p>
+            </details>
+            <details>
+              <summary>Thanh toán và giữ phòng ra sao?</summary>
+              <p>
+                Theo hướng dẫn đặt phòng hiện có, thanh toán 100% trước check-in. Với booking xa
+                ngày, cọc 100.000đ/đêm và thanh toán phần còn lại trước check-in 5 ngày. Nov chỉ giữ
+                phòng sau khi nhận cọc hoặc thanh toán; vui lòng xác nhận điều kiện áp dụng với Nov.
+              </p>
+            </details>
+            <details>
+              <summary>Chính sách hoàn, hủy và đổi lịch?</summary>
+              <p>
+                Theo chính sách hiện có: hủy trước ngày check-in 5 ngày được hoàn 100%; hủy sau mốc
+                này không hoàn tiền. Hỗ trợ đổi trước 5 ngày check-in một lần trong vòng 60 ngày.
+                Hãy liên hệ Nov để xác nhận chính sách cho booking của bạn.
+              </p>
+            </details>
+            <details>
+              <summary>Cần chuẩn bị gì khi nhận phòng?</summary>
+              <p>
+                Khách cần cung cấp thông tin CCCD, thẻ căn cước hoặc passport theo hướng dẫn trực
+                tiếp của Nov. Mật khẩu phòng được gửi trước check-in ít nhất một tiếng khi home đã
+                nhận đủ thông tin cần thiết.
+              </p>
+            </details>
+          </div>
+        </section>
+        <section class="section booking" id="booking">
+          <p class="eyebrow">YOUR NEXT STAY, MADE SIMPLE</p>
+          <h2>Một tin nhắn là bắt đầu.</h2>
+          <div class="steps">
+            <article>
+              <span>01</span>
+              <h3>Chọn phòng bạn thích</h3>
+              <p>Xem ảnh, tiện nghi và chọn khung giờ phù hợp với lịch của bạn.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Nhắn Nov kiểm tra phòng</h3>
+              <p>
+                Gửi tên phòng, chi nhánh, ngày và giờ dự kiến qua Zalo, WhatsApp hoặc Instagram.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Xác nhận & nhận hướng dẫn</h3>
+              <p>Thanh toán theo hướng dẫn của Nov, gửi bill và nhận thông tin check-in.</p>
+            </article>
+          </div>
+          <a class="button" href="https://zalo.me/0703277997" target="_blank" rel="noopener"
+            >Nhắn Nov qua Zalo ↗</a
+          ><a class="button cream" href="https://wa.me/84703277997" target="_blank" rel="noopener"
+            >Nhắn Nov qua WhatsApp ↗</a
+          >
+        </section>
+        <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+          <div class="section-top">
+            <div>
+              <p class="eyebrow">WORDS FROM AIRBNB GUESTS</p>
+              <h2 id="reviews-title">Nhận xét của khách</h2>
+            </div>
+            <a
+              class="underlink"
+              id="reviews-source"
+              href="https://www.airbnb.com.vn/users/show/399793828"
+              target="_blank"
+              rel="noopener"
+              >Xem đánh giá trên Airbnb ↗</a
+            >
+          </div>
+          <p class="reviews-context">Tóm lược đánh giá trên Airbnb</p>
+          <div class="review-grid" id="review-grid"></div>
+        </section>
+      </div>
+      <section id="rules-page" class="section rules-page" hidden></section>
+      <section id="availability-page" class="section availability-page" hidden></section>
+      <section id="room-detail" class="section detail-page" hidden></section>
+    </main>
+    <footer id="contact">
+      <div class="footer-top">
+        <div>
+          <p class="eyebrow">LET’S MAKE YOURSELF AT HOME</p>
+          <h2>Cảm ơn bạn đã chọn November Homestay cho kỳ nghỉ của mình</h2>
+          <div class="footer-actions">
+            <a class="button cream" href="https://zalo.me/0703277997" target="_blank" rel="noopener"
+              >Nhắn Nov qua Zalo ↗</a
+            ><a class="button cream" href="https://wa.me/84703277997" target="_blank" rel="noopener"
+              >Nhắn Nov qua WhatsApp ↗</a
+            >
+          </div>
+        </div>
+        <div class="footer-contact">
+          <a class="brand" href="index.html">november<span>HOMESTAY · SÀI GÒN</span></a
+          ><a href="tel:+84703277997">(+84) 703 27 7997</a
+          ><a href="mailto:nov.housecontact@gmail.com">nov.housecontact@gmail.com</a>
+          <div class="footer-social">
+            <a
+              href="https://wa.me/84703277997"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+              title="WhatsApp"
+              ><img src="img/social/whatsapp.svg" alt="" width="24" height="24" loading="lazy"
+            /></a>
+            <a
+              href="https://www.airbnb.com.vn/users/show/399793828"
+              target="_blank"
+              rel="noopener"
+              aria-label="Airbnb"
+              title="Airbnb"
+              ><img src="img/social/airbnb.svg" alt="" width="24" height="24" loading="lazy"
+            /></a>
+            <a
+              href="https://www.tiktok.com/@nov.housesg"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+              title="TikTok"
+              ><img src="img/social/tiktok.svg" alt="" width="24" height="24" loading="lazy"
+            /></a>
+            <a
+              href="https://www.instagram.com/nov.housesg/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              title="Instagram"
+              ><img src="img/social/instagram.svg" alt="" width="24" height="24" loading="lazy"
+            /></a>
+            <a
+              href="https://www.facebook.com/people/November-Homestay/61571732833395/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+              title="Facebook"
+              ><img src="img/social/facebook.svg" alt="" width="24" height="24" loading="lazy"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> November Homestay</span
+        ><span>Made for your slow days in Saigon.</span
+        ><a href="index.html?page=availability">Tạo danh sách phòng trống</a
+        ><a href="index.html?page=rules">Nội quy lưu trú</a
+        ><a href="index.html#faq">Chính sách & câu hỏi thường gặp</a>
+      </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
