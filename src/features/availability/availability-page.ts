@@ -1,4 +1,12 @@
 import type { Catalog } from '../../domain/catalog';
+import {
+  builderUnlocked,
+  unlockBuilder,
+  storeBuilder,
+  loadBuilderDraft,
+  type BuilderDraft,
+} from './builder-storage';
+import { calculatePrice, priceKeysView, mountInlinePrices } from './price-calculator';
 import { roomCover } from '../../domain/catalog';
 import { $, esc, money, copy, targetElement } from '../../shared/dom';
 import { localize, t } from '../../i18n';
@@ -14,6 +22,8 @@ import {
   type Availability,
   type StayType,
 } from './availability';
+
+let detachBuilderSession: (() => void) | undefined;
 
 export function offerSummary(offer: Availability): string {
   return `${displayDate(offer.arrival)} → ${displayDate(offer.departure)} · ${offer.start}–${offer.end}`;
@@ -70,10 +80,16 @@ export function mountAvailable(catalog: Catalog, token: string): void {
   }
 }
 export function mountAvailabilityBuilder(catalog: Catalog): void {
+  detachBuilderSession?.();
   $('#home').hidden = true;
   const page = $('#availability-page');
   page.hidden = false;
   document.title = 'Tạo danh sách phòng trống — November Homestay';
+  if (builderUnlocked()) {
+    renderAvailabilityBuilder(catalog);
+    localize(page);
+    return;
+  }
   page.innerHTML = `<a class="underlink" href="index.html">Trang chủ</a><h1>Tạo danh sách phòng trống</h1>
 <form id="availability-unlock" class="availability-form">
 <label for="availability-password">Mật khẩu<input id="availability-password" type="password" autocomplete="current-password" required></label>
@@ -87,6 +103,7 @@ export function mountAvailabilityBuilder(catalog: Catalog): void {
       password.focus();
       return;
     }
+    unlockBuilder();
     renderAvailabilityBuilder(catalog);
     localize(page);
     $('#offer-type').focus();
@@ -96,6 +113,7 @@ export function mountAvailabilityBuilder(catalog: Catalog): void {
 /** Shared by the owner form and interaction tests. The password entry mounts this form. */
 export function builderView(catalog: Catalog): string {
   return `<a class="underlink" href="index.html">Trang chủ</a><h1>Tạo danh sách phòng trống</h1><p>Chọn lịch lưu trú, các phòng còn trống và nhập tổng tiền cuối cùng cho từng phòng.</p>
+<div class="availability-actions"><button type="button" class="button cream" id="new-offer">Tạo danh sách mới</button><button type="button" class="text-button" id="lock-offer">Khóa form</button></div><p id="offer-draft-status" role="status"></p>
 <form id="availability-form" class="availability-form">
 <h2>1. Thời gian lưu trú</h2>
 <label>Loại lưu trú<select id="offer-type"><option value="hourly">Theo giờ</option><option value="overnight">Qua đêm</option><option value="daily" selected>Theo ngày</option><option value="other">Loại khác</option></select></label>
@@ -106,14 +124,17 @@ export function builderView(catalog: Catalog): string {
 <h2>2. Phụ thu chung (không bắt buộc)</h2><p class="availability-help">Áp dụng cho tất cả phòng. Nhiều phụ thu được cộng tỷ lệ, không tính chồng. Tổng tiền nhập bên dưới đã bao gồm các khoản này.</p>
 <div id="offer-surcharges">${surchargeRow(0)}</div><button type="button" class="underlink" id="add-surcharge">Thêm phụ thu</button>
 <h2>3. Chọn phòng còn trống</h2><p class="availability-help">Tổng tiền khách thanh toán — đã gồm extra và phụ thu nếu có</p>
-${catalog.branches
+${[...catalog.branches]
+  .sort(
+    (a, b) => ['hs', 'dbp', 'pn', 'hbt'].indexOf(a.id) - ['hs', 'dbp', 'pn', 'hbt'].indexOf(b.id),
+  )
   .map(
     (branch) =>
       `<fieldset class="offer-branch"><legend>${esc(branch.name)}</legend>${catalog.rooms
         .filter((room) => room.branch === branch.id)
         .map(
           (room) =>
-            `<div class="offer-room-choice"><label class="offer-room-toggle"><input type="checkbox" data-offer-room="${esc(room.id)}"><span>${esc(room.name)} · ${esc(room.id.toUpperCase())}</span></label><label class="offer-room-price" hidden>Tổng tiền khách thanh toán — đã gồm extra và phụ thu nếu có<input type="number" data-offer-price="${esc(room.id)}" aria-label="${esc(t('Tổng cộng') + ' ' + room.id.toUpperCase())}" min="0.001" max="100000" step="any" inputmode="decimal" aria-describedby="offer-price-help-${esc(room.id)}" disabled><small id="offer-price-help-${esc(room.id)}">${t('Đơn vị nghìn VND — nhập 161 = 161.000 VND')}</small><output class="offer-price-display" data-offer-price-display="${esc(room.id)}" aria-live="polite"></output></label></div>`,
+            `<div class="offer-room-choice"><label class="offer-room-toggle"><input type="checkbox" data-offer-room="${esc(room.id)}"><span>${esc(room.name)} · ${esc(room.id.toUpperCase())}</span></label><div class="offer-room-price" hidden><label>Tổng tiền khách thanh toán — đã gồm extra và phụ thu nếu có<input type="text" data-offer-price="${esc(room.id)}" aria-label="${esc(t('Tổng cộng') + ' ' + room.id.toUpperCase())}" maxlength="200" autocomplete="off" enterkeyhint="done" inputmode="decimal" placeholder="Ví dụ: 100x2+100" aria-describedby="offer-price-help-${esc(room.id)}" disabled></label>${priceKeysView()}<small id="offer-price-help-${esc(room.id)}">${t('Đơn vị nghìn VND — nhập 161 = 161.000 VND')}</small><output class="offer-price-display" data-offer-price-display="${esc(room.id)}" aria-live="polite"></output></div></div>`,
         )
         .join('')}</fieldset>`,
   )
@@ -129,6 +150,7 @@ function surchargeRow(index: number): string {
   return `<div class="offer-surcharge-row"><label>Lý do phụ thu<input type="text" data-fee-reason maxlength="80" placeholder="Ví dụ: Lễ, Tết"></label><label>Phụ thu (%)<input type="number" data-fee-percent min="0.01" max="100" step="any" inputmode="decimal" placeholder="20"></label><button type="button" class="text-button" data-remove-fee="${index}" aria-label="Bỏ phụ thu">Bỏ phụ thu</button></div>`;
 }
 export function renderAvailabilityBuilder(catalog: Catalog): void {
+  detachBuilderSession?.();
   const page = $('#availability-page');
   page.innerHTML = builderView(catalog);
   const form = $<HTMLFormElement>('#availability-form');
@@ -139,6 +161,41 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
   let reviewed: Availability | undefined;
   let nightsEdited = false;
   let feeIndex = 1;
+  const fields = ['arrival', 'departure', 'start', 'end', 'nights', 'hours', 'early', 'late'];
+  function saveDraft() {
+    const draft: BuilderDraft = {
+      savedAt: Date.now(),
+      fields: Object.fromEntries([
+        ['type', type.value],
+        ...fields.map((id) => [id, input(id).value]),
+      ]),
+      rooms: Object.fromEntries(
+        [...page.querySelectorAll<HTMLInputElement>('[data-offer-room]')].map((box) => [
+          box.dataset.offerRoom!,
+          {
+            checked: box.checked,
+            price: page.querySelector<HTMLInputElement>(
+              `[data-offer-price="${box.dataset.offerRoom}"]`,
+            )!.value,
+            expression: page.querySelector<HTMLInputElement>(
+              `[data-offer-price="${box.dataset.offerRoom}"]`,
+            )!.dataset.priceExpression,
+            result: page.querySelector<HTMLInputElement>(
+              `[data-offer-price="${box.dataset.offerRoom}"]`,
+            )!.dataset.priceResult,
+          },
+        ]),
+      ),
+      fees: [...page.querySelectorAll('.offer-surcharge-row')].map((row) => ({
+        reason: row.querySelector<HTMLInputElement>('[data-fee-reason]')!.value,
+        percent: row.querySelector<HTMLInputElement>('[data-fee-percent]')!.value,
+      })),
+      nightsEdited,
+    };
+    $('#offer-draft-status').textContent = storeBuilder('draft', draft)
+      ? `Đã lưu nháp lúc ${new Date(draft.savedAt).toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })}.`
+      : 'Không thể lưu nháp trên trình duyệt này. Hãy giữ trang đang mở.';
+  }
   function invalidate() {
     reviewed = undefined;
     generate.disabled = true;
@@ -222,23 +279,27 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
       error instanceof Error ? t(error.message) : t('Vui lòng kiểm tra thông tin.');
   };
   function priceInVND(value: string): number {
-    const amount = Number(value) * 1000;
-    return Math.abs(amount - Math.round(amount)) < 0.000001 ? Math.round(amount) : NaN;
+    return Math.round(calculatePrice(value) * 1000);
   }
   form.addEventListener('input', (event) => {
     invalidate();
     const target = targetElement(event);
     if (!target?.matches('[data-offer-price]')) return;
     const price = target as HTMLInputElement;
-    const amount = priceInVND(price.value);
-    const valid = Number.isSafeInteger(amount) && amount > 0 && amount <= 100000000;
-    price.setCustomValidity(
-      price.value && !valid ? t('Nhập giá theo nghìn VND, tối đa 3 chữ số thập phân.') : '',
-    );
+    let display = '';
+    let error = '';
+    if (price.value.trim()) {
+      try {
+        display = new Intl.NumberFormat('vi-VN').format(priceInVND(price.value)) + ' VND';
+      } catch (cause) {
+        error = (cause as Error).message;
+      }
+    }
+    price.setCustomValidity(error);
     price
       .closest('.offer-room-choice')!
       .querySelector<HTMLOutputElement>('[data-offer-price-display]')!.textContent =
-      price.value && valid ? new Intl.NumberFormat('vi-VN').format(amount) + ' VND' : '';
+      error || display;
   });
   form.addEventListener('change', (event) => {
     invalidate();
@@ -275,6 +336,7 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
     remove.closest('.offer-surcharge-row')!.remove();
     $<HTMLButtonElement>('#add-surcharge').disabled = false;
     invalidate();
+    saveDraft();
   });
   $('#preview-offer').addEventListener('click', () => {
     invalidate();
@@ -316,4 +378,73 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
   input('departure').value = nextDate(todayInSaigon());
   $('#offer-selection-count').textContent = `${t('Số phòng đã chọn')}: 0`;
   syncSchedule(true);
+  const draft = loadBuilderDraft();
+  if (draft) {
+    type.value = draft.fields.type;
+    if (!type.value) type.value = 'daily';
+    for (const id of fields)
+      if (typeof draft.fields[id] === 'string') input(id).value = draft.fields[id];
+    nightsEdited = draft.nightsEdited;
+    syncSchedule();
+    $('#offer-surcharges').innerHTML = draft.fees.map((_, index) => surchargeRow(index)).join('');
+    [...page.querySelectorAll('.offer-surcharge-row')].forEach((row, index) => {
+      row.querySelector<HTMLInputElement>('[data-fee-reason]')!.value = draft.fees[index].reason;
+      row.querySelector<HTMLInputElement>('[data-fee-percent]')!.value = draft.fees[index].percent;
+    });
+    feeIndex = draft.fees.length;
+    $<HTMLButtonElement>('#add-surcharge').disabled = draft.fees.length >= 5;
+    for (const box of page.querySelectorAll<HTMLInputElement>('[data-offer-room]')) {
+      const saved = draft.rooms[box.dataset.offerRoom!];
+      if (!saved) continue;
+      box.checked = saved.checked;
+      const price = page.querySelector<HTMLInputElement>(
+        `[data-offer-price="${box.dataset.offerRoom}"]`,
+      )!;
+      price.value = saved.price;
+      if (typeof saved.expression === 'string' && typeof saved.result === 'string') {
+        price.dataset.priceExpression = saved.expression;
+        price.dataset.priceResult = saved.result;
+      }
+      price.dispatchEvent(new Event('input', { bubbles: true }));
+      box.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    $('#offer-draft-status').textContent =
+      `Đã khôi phục bản nháp — lưu lúc ${new Date(draft.savedAt).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })}. Vui lòng xem trước lại trước khi tạo link.`;
+  }
+  form.addEventListener('input', saveDraft);
+  form.addEventListener('change', saveDraft);
+  $('#add-surcharge').addEventListener('click', saveDraft);
+  $('#new-offer').addEventListener('click', () => {
+    if (!confirm('Xóa nội dung đang nhập để tạo danh sách mới?')) return;
+    storeBuilder('draft', null);
+    renderAvailabilityBuilder(catalog);
+    localize(page);
+    $('#offer-type').focus();
+  });
+  $('#lock-offer').addEventListener('click', () => {
+    saveDraft();
+    storeBuilder('unlock', null);
+    mountAvailabilityBuilder(catalog);
+    localize(page);
+    $('#availability-password').focus();
+  });
+  mountInlinePrices(page);
+  const checkSession = () => {
+    if (!page.isConnected || page.hidden || !page.contains(form)) return;
+    if (!builderUnlocked()) {
+      mountAvailabilityBuilder(catalog);
+      localize(page);
+    }
+  };
+  const onVisibility = () => {
+    if (document.visibilityState === 'visible') checkSession();
+  };
+  document.addEventListener('visibilitychange', onVisibility);
+  document.defaultView?.addEventListener('focus', checkSession);
+  document.defaultView?.addEventListener('storage', checkSession);
+  detachBuilderSession = () => {
+    document.removeEventListener('visibilitychange', onVisibility);
+    document.defaultView?.removeEventListener('focus', checkSession);
+    document.defaultView?.removeEventListener('storage', checkSession);
+  };
 }

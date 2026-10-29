@@ -13,6 +13,8 @@ test('owner form unlocks, previews explicit totals, creates a complete link and 
     document: dom.document,
     location: dom.location,
     Element: dom.Element,
+    Event: dom.Event,
+    confirm: () => true,
     NodeFilter: dom.NodeFilter,
     localStorage: dom.localStorage,
     navigator: {
@@ -115,8 +117,8 @@ test('owner form unlocks, previews explicit totals, creates a complete link and 
     assert.equal(copied, element('#offer-link').value);
     const offer = decodeAvailability(new URL(copied).searchParams.get('s')!, catalog);
     assert.deepEqual(offer.rooms, [
-      { id: 'dbp101', price: 161000 },
       { id: 'hs102', price: 800000 },
+      { id: 'dbp101', price: 161000 },
     ]);
     assert.deepEqual(offer.calculation, {
       type: 'daily',
@@ -169,6 +171,65 @@ test('owner form unlocks, previews explicit totals, creates a complete link and 
     assert.equal(element('#add-surcharge').disabled, true);
     click('[data-remove-fee]');
     assert.equal(element('#add-surcharge').disabled, false);
+    // Reload restores raw prices, schedule, fees and requires a fresh preview.
+    mountAvailabilityBuilder(catalog);
+    assert.equal(dom.document.querySelector('#availability-password'), null);
+    assert.equal(element('[data-offer-price="dbp101"]').value, '162');
+    assert.equal(element('[data-offer-room="dbp101"]').checked, true);
+    assert.equal(element('#offer-type').value, 'other');
+    assert.equal(element('#generate-offer').disabled, true);
+    assert.ok(element('#offer-draft-status').textContent.includes('khôi phục'));
+    const price = element('[data-offer-price="dbp101"]');
+    assert.equal(dom.document.querySelector('#price-calculator'), null);
+    price.focus();
+    fill('[data-offer-price="dbp101"]', '100x2+100');
+    const enter = new dom.KeyboardEvent('keydown', {
+      key: 'Enter',
+      bubbles: true,
+      cancelable: true,
+    });
+    price.dispatchEvent(enter);
+    assert.equal(enter.defaultPrevented, true);
+    assert.equal(price.value, '300');
+    assert.equal(element('#offer-output').hidden, true);
+    price.blur();
+    price.focus();
+    assert.equal(price.value, '100x2+100');
+    fill('[data-offer-price="dbp101"]', '(350+50)*2');
+    price.blur();
+    assert.equal(price.value, '800');
+    assert.equal(element('[data-offer-price-display="dbp101"]').textContent, '800.000 VND');
+    price.focus();
+    fill('[data-offer-price="dbp101"]', '100 / 0');
+    price.blur();
+    assert.equal(price.value, '100 / 0');
+    assert.equal(price.checkValidity(), false);
+    assert.ok(element('[data-offer-price-display="dbp101"]').textContent.includes('chia cho 0'));
+    fill('[data-offer-price="dbp101"]', '400');
+    price.focus();
+    price.setSelectionRange(3, 3);
+    (price.closest('.offer-room-price')!.querySelector('[data-price-key="×"]') as Input).click();
+    assert.equal(price.value, '400×');
+    fill('[data-offer-price="dbp101"]', '400×2');
+    price.dispatchEvent(
+      new dom.KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }),
+    );
+    assert.equal(price.value, '800');
+    click('#lock-offer');
+    assert.ok(element('#availability-password'));
+    fill('#availability-password', 'ngoinha11');
+    element('#availability-unlock').dispatchEvent(
+      new dom.Event('submit', { bubbles: true, cancelable: true }),
+    );
+    assert.equal(element('[data-offer-price="dbp101"]').value, '800');
+    element('[data-offer-price="dbp101"]').focus();
+    assert.equal(element('[data-offer-price="dbp101"]').value, '400×2');
+    element('[data-offer-price="dbp101"]').blur();
+    assert.equal(element('[data-offer-price="dbp101"]').value, '800');
+    click('#new-offer');
+    assert.equal(element('[data-offer-room="dbp101"]').checked, false);
+    assert.equal(element('#offer-type').value, 'daily');
+    click('#lock-offer');
     // The same owner/guest workflow also renders in English.
     dom.location.search = '?page=availability&lang=en';
     mountAvailabilityBuilder(catalog);

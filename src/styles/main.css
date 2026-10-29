@@ -2174,3 +2174,27 @@ h3 {
 #favorite-filter[aria-pressed='true'] .icon-heart {
   fill: currentColor;
 }
+#offer-draft-status {
+  font-size: 13px;
+  color: var(--muted);
+}
+.offer-price-keys {
+  display: none;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.offer-room-price:focus-within .offer-price-keys {
+  display: flex;
+}
+.offer-price-keys button {
+  min-width: 40px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}

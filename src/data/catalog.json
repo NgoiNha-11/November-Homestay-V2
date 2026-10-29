@@ -31,7 +31,8 @@
         "Dịch vụ dọn phòng",
         "Bình chữa cháy",
         "Bãi giữ xe máy",
-        "Wifi miễn phí"
+        "Wifi miễn phí",
+        "Máy giặt"
       ]
     },
     {
@@ -66,7 +67,8 @@
         "Dịch vụ dọn phòng",
         "Bình chữa cháy",
         "Khu vực để xe máy",
-        "Wifi miễn phí"
+        "Wifi miễn phí",
+        "Máy giặt"
       ]
     }
   ],
@@ -118,7 +120,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -130,7 +132,7 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 1", "Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "dbp201",
@@ -180,7 +182,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -191,7 +193,13 @@
         "WC riêng",
         "Không gian yên tĩnh"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, ban công, cửa sổ", "Tối đa 2 khách"]
+      "overview": [
+        "Tầng 2",
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Bếp, ban công, cửa sổ",
+        "Tối đa 2 khách"
+      ]
     },
     {
       "id": "dbp202",
@@ -240,7 +248,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -251,7 +259,7 @@
         "WC riêng",
         "Không gian yên tĩnh"
       ],
-      "overview": ["Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 2", "Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "dbp301",
@@ -301,7 +309,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -312,7 +320,13 @@
         "WC riêng",
         "Không gian yên tĩnh"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, ban công, cửa sổ", "Tối đa 2 khách"]
+      "overview": [
+        "Tầng 3",
+        "Diện tích: 20m²",
+        "1 giường đôi",
+        "Bếp, ban công, cửa sổ",
+        "Tối đa 2 khách"
+      ]
     },
     {
       "id": "dbp302",
@@ -365,7 +379,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -376,7 +390,7 @@
         "WC riêng",
         "Không gian yên tĩnh"
       ],
-      "overview": ["Diện tích: 15m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 3", "Diện tích: 15m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "dbp401",
@@ -422,7 +436,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -434,7 +448,7 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 4", "Diện tích: 18m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "pn101",
@@ -483,7 +497,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -495,6 +509,7 @@
         "Không gian yên tĩnh"
       ],
       "overview": [
+        "Tầng 1",
         "Diện tích: 20m²",
         "1 giường đôi",
         "Bếp, cửa sổ",
@@ -550,7 +565,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -562,6 +577,7 @@
         "Không gian yên tĩnh"
       ],
       "overview": [
+        "Tầng 2",
         "Diện tích: 20m²",
         "1 giường đôi",
         "Bếp, ban công, cửa sổ",
@@ -617,7 +633,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -628,7 +644,7 @@
         "WC riêng",
         "Không gian yên tĩnh"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 1", "Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "hs201",
@@ -682,7 +698,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Lò nướng mini",
         "Tủ lạnh",
@@ -695,6 +711,7 @@
         "Không gian yên tĩnh"
       ],
       "overview": [
+        "Tầng 2",
         "Diện tích: 20m²",
         "1 giường đôi",
         "Ban công, cửa sổ",
@@ -753,7 +770,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -765,7 +782,7 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 2", "Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "hs301",
@@ -818,7 +835,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -831,6 +848,7 @@
         "Lò vi sóng"
       ],
       "overview": [
+        "Tầng 3",
         "Diện tích: 20m²",
         "1 giường đôi",
         "Ban công, cửa sổ",
@@ -883,7 +901,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -894,7 +912,7 @@
         "WC riêng",
         "Không gian yên tĩnh"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 3", "Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "hs401",
@@ -944,7 +962,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -956,6 +974,7 @@
         "Không gian yên tĩnh"
       ],
       "overview": [
+        "Tầng 4",
         "Diện tích: 20m²",
         "1 giường đôi",
         "Ban công, cửa sổ",
@@ -1013,7 +1032,7 @@
       "amenities": [
         "Không hút thuốc",
         "Bếp và dụng cụ nấu ăn cơ bản",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -1025,6 +1044,7 @@
         "Không gian yên tĩnh"
       ],
       "overview": [
+        "Tầng 5",
         "Diện tích: 20m²",
         "1 giường đôi",
         "Bếp, ban công, cửa sổ",
@@ -1077,7 +1097,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -1089,7 +1109,7 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 1", "Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "hbt102",
@@ -1138,7 +1158,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -1151,6 +1171,7 @@
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
       "overview": [
+        "Tầng 1",
         "Diện tích: 17m²",
         "1 giường đôi",
         "Ban công, bếp chung",
@@ -1205,7 +1226,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -1217,7 +1238,7 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 2", "Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "hbt301",
@@ -1270,7 +1291,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -1282,7 +1303,7 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
+      "overview": ["Tầng 3", "Diện tích: 20m²", "1 giường đôi", "Bếp, cửa sổ", "Tối đa 2 khách"]
     },
     {
       "id": "hbtg01",
@@ -1328,7 +1349,7 @@
       ],
       "amenities": [
         "Không hút thuốc",
-        "Máy chiếu có Netflix",
+        "Máy chiếu",
         "Máy lạnh",
         "Tủ lạnh",
         "Ấm đun nước",
@@ -1340,7 +1361,13 @@
         "Không gian yên tĩnh",
         "Bếp và dụng cụ nấu ăn cơ bản"
       ],
-      "overview": ["Diện tích: 17m²", "1 giường đôi", "Máy chiếu, bếp chung", "Tối đa 2 khách"]
+      "overview": [
+        "Tầng trệt",
+        "Diện tích: 17m²",
+        "1 giường đôi",
+        "Máy chiếu, bếp chung",
+        "Tối đa 2 khách"
+      ]
     }
   ]
 }
