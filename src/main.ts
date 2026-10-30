@@ -14,7 +14,9 @@ import { $, targetElement } from './shared/dom';
 async function main(): Promise<void> {
   mountLanguageSwitch();
   const animateSocial = (event: Event): void => {
-    const link = targetElement(event)?.closest<HTMLAnchorElement>('.footer-social a');
+    const link = targetElement(event)?.closest<HTMLAnchorElement>(
+      '.footer-social a, .button[href^="https://zalo.me/"], .button[href^="https://wa.me/"]',
+    );
     if (!link || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     link.classList.remove('is-bubbling');
     void link.offsetWidth;
