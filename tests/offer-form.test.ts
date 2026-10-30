@@ -229,6 +229,12 @@ test('owner form unlocks, previews explicit totals, creates a complete link and 
     click('#new-offer');
     assert.equal(element('[data-offer-room="dbp101"]').checked, false);
     assert.equal(element('#offer-type').value, 'daily');
+    fill('#offer-arrival', '2000-01-01');
+    fill('#offer-departure', '2000-01-02');
+    click('#preview-offer');
+    assert.ok(element('#offer-arrival').value < element('#offer-arrival').min);
+    assert.equal(element('#offer-preview').hidden, true);
+    assert.equal(element('#generate-offer').disabled, true);
     click('#lock-offer');
     // The same owner/guest workflow also renders in English.
     dom.location.search = '?page=availability&lang=en';

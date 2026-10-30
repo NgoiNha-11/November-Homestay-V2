@@ -213,6 +213,8 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
     $('#offer-error').textContent = '';
   }
   function syncSchedule(resetTimes = false) {
+    const today = todayInSaigon();
+    input('arrival').min = today;
     const kind = type.value as StayType;
     const overnight = kind === 'daily' || kind === 'overnight';
     if (resetTimes) {
@@ -226,6 +228,7 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
       }
     }
     input('departure').min = overnight ? nextDate(input('arrival').value) : input('arrival').value;
+    if (input('departure').min < today) input('departure').min = today;
     if (input('departure').value < input('departure').min)
       input('departure').value = input('departure').min;
     $('#offer-nights-field').hidden = kind !== 'daily';
@@ -237,6 +240,9 @@ export function renderAvailabilityBuilder(catalog: Catalog): void {
       input('nights').value = String(stayNights(input('arrival').value, input('departure').value));
   }
   function readOffer(): Availability {
+    input('arrival').min = todayInSaigon();
+    if (input('arrival').value < todayInSaigon() || input('departure').value < todayInSaigon())
+      throw new Error(t('Bạn vui lòng chọn ngày hôm nay hoặc sau đó.'));
     if (!page.querySelector('[data-offer-room]:checked'))
       throw new Error(t('Bạn chọn ít nhất một phòng còn trống.'));
     const surcharges = [...page.querySelectorAll<HTMLElement>('.offer-surcharge-row')].flatMap(
