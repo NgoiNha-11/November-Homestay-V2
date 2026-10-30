@@ -9,6 +9,10 @@ export const houseRules = [
     text: 'Cấm tàng trữ hoặc sử dụng các chất kích thích bất hợp pháp. Không đốt, hút thuốc hoặc sử dụng các vật dụng dễ gây cháy nổ.',
   },
   {
+    title: 'Giữ yên tĩnh',
+    text: 'Vui lòng giữ yên tĩnh từ 22h-6h. Không tổ chức tiệc, mở nhạc lớn, hát karaoke hoặc gây tiếng ồn ảnh hưởng đến các phòng khác và khu dân cư xung quanh.',
+  },
+  {
     title: 'Giữ vệ sinh chung',
     text: 'Không xả rác vào bồn cầu gây tắc nghẽn. Vui lòng để rác đúng nơi quy định.',
   },

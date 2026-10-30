@@ -13,6 +13,20 @@ import { mountRules } from './features/rules/rules-page';
 import { $, targetElement } from './shared/dom';
 async function main(): Promise<void> {
   mountLanguageSwitch();
+  const animateSocial = (event: Event): void => {
+    const link = targetElement(event)?.closest<HTMLAnchorElement>('.footer-social a');
+    if (!link || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    link.classList.remove('is-bubbling');
+    void link.offsetWidth;
+    link.classList.add('is-bubbling');
+    link.addEventListener('animationend', () => link.classList.remove('is-bubbling'), {
+      once: true,
+    });
+  };
+  document.addEventListener('pointerdown', animateSocial);
+  document.addEventListener('click', (event) => {
+    if (event.detail === 0) animateSocial(event);
+  });
   const catalog = await new StaticCatalogRepository().load();
   const params = new URLSearchParams(location.search);
   $('.menu-toggle').addEventListener('click', () => {
@@ -49,7 +63,12 @@ async function main(): Promise<void> {
     if (!destination) return;
     event.preventDefault();
     history.pushState(null, '', url.hash);
-    destination.scrollIntoView({ behavior: 'instant', block: 'start' });
+    destination.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ? 'instant'
+        : 'smooth',
+      block: 'start',
+    });
     destination.setAttribute('tabindex', '-1');
     destination.focus({ preventScroll: true });
   });

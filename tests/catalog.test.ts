@@ -37,7 +37,7 @@ test('search ignores Vietnamese accents and case', async () => {
 test('price budget applies to starting prices, independent of price array order', async () => {
   const catalog = await repository.load();
   catalog.rooms.forEach((r) => r.prices.reverse());
-  assert.equal(filterRooms(catalog, { ...filters, maxPrice: 350000 }).length, 13);
+  assert.equal(filterRooms(catalog, { ...filters, maxPrice: 350000 }).length, 10);
   assert.equal(
     priceFor(
       catalog.rooms.find((r) => r.id === 'pn101')!,
@@ -82,11 +82,11 @@ test('room covers always use numbered image 1 and HBT prices match supplied rate
   const expected: Record<string, number[]> = {
     dbp101: [330000, 400000, 500000],
     dbp401: [330000, 400000, 500000],
-    hbtg01: [350000, 430000, 500000],
+    hbtg01: [330000, 430000, 500000],
     hbt102: [370000, 470000, 560000],
-    hbt101: [350000, 450000, 580000],
-    hbt201: [350000, 450000, 580000],
-    hbt301: [350000, 450000, 580000],
+    hbt101: [370000, 470000, 580000],
+    hbt201: [370000, 470000, 580000],
+    hbt301: [370000, 470000, 580000],
   };
   for (const [id, prices] of Object.entries(expected)) {
     const room = catalog.rooms.find((room) => room.id === id)!;

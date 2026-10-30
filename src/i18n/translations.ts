@@ -177,6 +177,9 @@ export const english: Record<string, string> = {
   'Cấm tàng trữ hoặc sử dụng các chất kích thích bất hợp pháp. Không đốt, hút thuốc hoặc sử dụng các vật dụng dễ gây cháy nổ.':
     'Possessing or using illegal drugs is prohibited. Do not burn anything, smoke or use items that pose a fire or explosion risk.',
   'Giữ vệ sinh chung': 'Keep the space clean',
+  'Giữ yên tĩnh': 'Keep noise down',
+  'Vui lòng giữ yên tĩnh từ 22h-6h. Không tổ chức tiệc, mở nhạc lớn, hát karaoke hoặc gây tiếng ồn ảnh hưởng đến các phòng khác và khu dân cư xung quanh.':
+    'Please keep quiet from 10 PM to 6 AM the following morning. Do not host parties, play loud music, sing karaoke, or make noise that disturbs other guests or the surrounding neighborhood.',
   'Không xả rác vào bồn cầu gây tắc nghẽn. Vui lòng để rác đúng nơi quy định.':
     'Do not flush rubbish down the toilet. Please put rubbish in the designated bins.',
   'Kiểm tra thông tin đặt phòng': 'Check your booking details',

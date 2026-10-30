@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
   scroll-padding-top: 105px;
 }
 body {
@@ -364,6 +364,8 @@ nav a:hover,
 .room-card {
   position: relative;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 .room-image {
   display: block;
@@ -426,6 +428,7 @@ nav a:hover,
   min-height: 20px;
 }
 .card-bottom {
+  margin-top: auto;
   border-top: 1px solid var(--line);
   padding-top: 13px;
   display: flex;
@@ -574,6 +577,14 @@ footer {
   gap: 10px;
 }
 .footer-social a {
+  --social-color: #a4533a;
+  position: relative;
+  isolation: isolate;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -581,8 +592,54 @@ footer {
   height: 44px;
   border: 0;
 }
-.footer-social a:hover {
-  background: #ffffff18;
+.footer-social a:hover,
+.footer-social a:focus-visible,
+.footer-social a.is-bubbling {
+  background-color: var(--social-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px #00000024;
+}
+.footer-social a[aria-label='Facebook'] {
+  --social-color: #1877f2;
+}
+.footer-social a[aria-label='Instagram'] {
+  --social-color: #c13584;
+}
+.footer-social a[aria-label='WhatsApp'] {
+  --social-color: #128c7e;
+}
+.footer-social a[aria-label='Airbnb'] {
+  --social-color: #e04450;
+}
+.footer-social a[aria-label='TikTok'] {
+  --social-color: #161823;
+}
+.footer-social a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.footer-social a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 2px solid var(--social-color);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.footer-social a.is-bubbling::after {
+  animation: social-bubble 0.65s ease-out;
+}
+@keyframes social-bubble {
+  from {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 .footer-social img {
   display: block;

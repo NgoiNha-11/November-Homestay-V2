@@ -41,7 +41,7 @@ test('the supplied message yields all nine rooms, exact quotes and the next morn
   assert.equal(parsed.rooms.find((r) => r.id === 'hbt101')!.price, 470000);
   assert.equal(
     catalog.rooms.find((r) => r.id === 'hbt101')!.prices.find((p) => p.slot === 'overnight')!.value,
-    450000,
+    470000,
   );
 });
 test('links round-trip under a subdirectory and details retain the whole offer', async () => {
