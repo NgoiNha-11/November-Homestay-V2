@@ -69,8 +69,14 @@ test('guest page has actual dates, collapsed calculation, shared additive fees a
   const html = availableView(base, catalog, token, 'https://novemberhomestay.com/');
   assert.ok(html.includes('Phòng trống cho kỳ nghỉ của bạn'));
   assert.ok(!html.includes('NOVEMBER HOMESTAY'));
-  assert.ok(html.includes('<strong>Check-in (12:00): 30/10/2099</strong>'));
-  assert.ok(html.includes('<strong>Check-out (14:00): 01/11/2099</strong>'));
+  assert.ok(
+    html.includes('<span>Check-in</span><strong>12:00</strong><time datetime="2099-10-30">'),
+  );
+  assert.ok(
+    html.includes('<span>Check-out</span><strong>14:00</strong><time datetime="2099-11-01">'),
+  );
+  assert.ok(html.includes('<p class="offer-time-title">Thời gian:</p>'));
+  assert.ok(html.includes(', 30/10/2099</time>'));
   assert.ok(html.includes('<details class="offer-calculation">'));
   assert.ok(!html.includes('<details class="offer-calculation" open'));
   assert.ok(html.includes('Giá theo ngày × 2 đêm'));

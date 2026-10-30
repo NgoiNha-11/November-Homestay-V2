@@ -9,7 +9,7 @@ import {
 import { calculatePrice, priceKeysView, mountInlinePrices } from './price-calculator';
 import { roomCover } from '../../domain/catalog';
 import { $, esc, money, copy, targetElement } from '../../shared/dom';
-import { localize, t } from '../../i18n';
+import { getLocale, localize, t } from '../../i18n';
 import { todayInSaigon } from '../../shared/config';
 import {
   availabilityURL,
@@ -29,6 +29,14 @@ export function offerSummary(offer: Availability): string {
   return `${displayDate(offer.arrival)} → ${displayDate(offer.departure)} · ${offer.start}–${offer.end}`;
 }
 export function offerNotice(offer: Availability): string {
+  const stayDate = (date: string): string => {
+    const weekday = new Intl.DateTimeFormat(getLocale() === 'en' ? 'en-US' : 'vi-VN', {
+      weekday: 'long',
+      timeZone: 'UTC',
+    }).format(new Date(`${date}T00:00:00Z`));
+    const day = weekday.charAt(0).toLocaleUpperCase(getLocale()) + weekday.slice(1);
+    return `<time datetime="${esc(date)}">${esc(day)}, ${esc(displayDate(date))}</time>`;
+  };
   const c = offer.calculation;
   const lines: string[] = [];
   if (c?.type === 'daily') lines.push(`${t('Giá theo ngày')} × ${c.units} ${t('đêm')}`);
@@ -39,8 +47,8 @@ export function offerNotice(offer: Availability): string {
   if (c?.lateHours)
     lines.push(`${t('Extra trả muộn')}: ${c.lateHours} ${t('giờ')} × ${money(50000)}`);
   const fees = c?.surcharges ?? [];
-  return `<div class="offer-notice"><p><strong>${t('Thời gian')}</strong></p>
-<p><strong>Check-in (${esc(offer.start)}): ${esc(displayDate(offer.arrival))}</strong><br><strong>Check-out (${esc(offer.end)}): ${esc(displayDate(offer.departure))}</strong></p>
+  return `<div class="offer-notice"><p class="offer-time-title">${t('Thời gian')}:</p>
+<div class="offer-schedule"><p><span>Check-in</span><strong>${esc(offer.start)}</strong>${stayDate(offer.arrival)}</p><p><span>Check-out</span><strong>${esc(offer.end)}</strong>${stayDate(offer.departure)}</p></div>
 ${lines.length ? `<details class="offer-calculation"><summary>${t('Xem cách tính')}</summary><ul>${lines.map((line) => `<li>${esc(line)}</li>`).join('')}</ul></details>` : ''}
 ${fees.length ? `<div class="offer-fees"><p><strong>${t('Phụ thu áp dụng cho tất cả phòng')}</strong></p><ul>${fees.map((fee) => `<li><span data-no-translate>${esc(fee.reason)}</span>: ${fee.percent}%</li>`).join('')}</ul>${fees.length > 1 ? `<p>${t('Tổng tỷ lệ phụ thu')}: ${Number(fees.reduce((sum, fee) => sum + fee.percent, 0).toFixed(2))}% (${t('cộng các tỷ lệ, không tính chồng')})</p>` : ''}</div>` : ''}
 <p>${t('Tổng tiền từng phòng bên dưới đã bao gồm extra và phụ thu nếu có.')}</p>
